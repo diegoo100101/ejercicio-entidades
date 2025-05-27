@@ -15,4 +15,7 @@ public class Ruta implements Serializable {
     @Column(name = "id_ruta")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idRuta;
+
+    @Column(name = "ds_descripcion")
+    private String dsDescripcion;
 }

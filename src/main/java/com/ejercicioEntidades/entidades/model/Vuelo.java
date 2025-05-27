@@ -18,4 +18,8 @@ public class Vuelo implements Serializable {
 
     @Column(name = "ds_destino")
     private String dsDestino;
+
+    @JoinColumn(name = "id_ruta")
+    @ManyToOne
+    private Ruta ruta;
 }
