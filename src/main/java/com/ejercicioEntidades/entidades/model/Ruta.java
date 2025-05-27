@@ -7,6 +7,7 @@ import lombok.Setter;
 import java.io.Serializable;
 
 @Entity
+@Table(name = "ruta")
 @Getter
 @Setter
 public class Ruta implements Serializable {

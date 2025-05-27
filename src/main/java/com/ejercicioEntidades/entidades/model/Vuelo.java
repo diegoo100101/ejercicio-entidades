@@ -7,6 +7,7 @@ import lombok.Setter;
 import java.io.Serializable;
 
 @Entity
+@Table(name = "vuelo")
 @Getter
 @Setter
 public class Vuelo implements Serializable {
@@ -19,7 +20,8 @@ public class Vuelo implements Serializable {
     @Column(name = "ds_destino")
     private String dsDestino;
 
-    @JoinColumn(name = "id_ruta")
-    @ManyToOne
+    @JoinColumn(name = "id_ruta",
+            referencedColumnName = "id_ruta")
+    @ManyToOne(fetch = FetchType.EAGER)
     private Ruta ruta;
 }
