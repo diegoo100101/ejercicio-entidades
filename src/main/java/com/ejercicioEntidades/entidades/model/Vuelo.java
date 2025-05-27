@@ -20,8 +20,7 @@ public class Vuelo implements Serializable {
     @Column(name = "ds_destino")
     private String dsDestino;
 
-    @JoinColumn(name = "id_ruta",
-            referencedColumnName = "id_ruta")
+    @JoinColumn(name = "id_ruta", referencedColumnName = "id_ruta")
     @ManyToOne(fetch = FetchType.EAGER)
     private Ruta ruta;
 }
